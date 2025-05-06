@@ -62,12 +62,147 @@ class MiniLangListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by MiniLangParser#ifStmt.
+    def enterIfStmt(self, ctx:MiniLangParser.IfStmtContext):
+        pass
+
+    # Exit a parse tree produced by MiniLangParser#ifStmt.
+    def exitIfStmt(self, ctx:MiniLangParser.IfStmtContext):
+        pass
+
+
+    # Enter a parse tree produced by MiniLangParser#whileStmt.
+    def enterWhileStmt(self, ctx:MiniLangParser.WhileStmtContext):
+        pass
+
+    # Exit a parse tree produced by MiniLangParser#whileStmt.
+    def exitWhileStmt(self, ctx:MiniLangParser.WhileStmtContext):
+        pass
+
+
+    # Enter a parse tree produced by MiniLangParser#forStmt.
+    def enterForStmt(self, ctx:MiniLangParser.ForStmtContext):
+        pass
+
+    # Exit a parse tree produced by MiniLangParser#forStmt.
+    def exitForStmt(self, ctx:MiniLangParser.ForStmtContext):
+        pass
+
+
+    # Enter a parse tree produced by MiniLangParser#forControl.
+    def enterForControl(self, ctx:MiniLangParser.ForControlContext):
+        pass
+
+    # Exit a parse tree produced by MiniLangParser#forControl.
+    def exitForControl(self, ctx:MiniLangParser.ForControlContext):
+        pass
+
+
+    # Enter a parse tree produced by MiniLangParser#forInit.
+    def enterForInit(self, ctx:MiniLangParser.ForInitContext):
+        pass
+
+    # Exit a parse tree produced by MiniLangParser#forInit.
+    def exitForInit(self, ctx:MiniLangParser.ForInitContext):
+        pass
+
+
+    # Enter a parse tree produced by MiniLangParser#forUpdate.
+    def enterForUpdate(self, ctx:MiniLangParser.ForUpdateContext):
+        pass
+
+    # Exit a parse tree produced by MiniLangParser#forUpdate.
+    def exitForUpdate(self, ctx:MiniLangParser.ForUpdateContext):
+        pass
+
+
+    # Enter a parse tree produced by MiniLangParser#breakStmt.
+    def enterBreakStmt(self, ctx:MiniLangParser.BreakStmtContext):
+        pass
+
+    # Exit a parse tree produced by MiniLangParser#breakStmt.
+    def exitBreakStmt(self, ctx:MiniLangParser.BreakStmtContext):
+        pass
+
+
+    # Enter a parse tree produced by MiniLangParser#block.
+    def enterBlock(self, ctx:MiniLangParser.BlockContext):
+        pass
+
+    # Exit a parse tree produced by MiniLangParser#block.
+    def exitBlock(self, ctx:MiniLangParser.BlockContext):
+        pass
+
+
+    # Enter a parse tree produced by MiniLangParser#functionDecl.
+    def enterFunctionDecl(self, ctx:MiniLangParser.FunctionDeclContext):
+        pass
+
+    # Exit a parse tree produced by MiniLangParser#functionDecl.
+    def exitFunctionDecl(self, ctx:MiniLangParser.FunctionDeclContext):
+        pass
+
+
+    # Enter a parse tree produced by MiniLangParser#params.
+    def enterParams(self, ctx:MiniLangParser.ParamsContext):
+        pass
+
+    # Exit a parse tree produced by MiniLangParser#params.
+    def exitParams(self, ctx:MiniLangParser.ParamsContext):
+        pass
+
+
+    # Enter a parse tree produced by MiniLangParser#param.
+    def enterParam(self, ctx:MiniLangParser.ParamContext):
+        pass
+
+    # Exit a parse tree produced by MiniLangParser#param.
+    def exitParam(self, ctx:MiniLangParser.ParamContext):
+        pass
+
+
+    # Enter a parse tree produced by MiniLangParser#functionCall.
+    def enterFunctionCall(self, ctx:MiniLangParser.FunctionCallContext):
+        pass
+
+    # Exit a parse tree produced by MiniLangParser#functionCall.
+    def exitFunctionCall(self, ctx:MiniLangParser.FunctionCallContext):
+        pass
+
+
+    # Enter a parse tree produced by MiniLangParser#args.
+    def enterArgs(self, ctx:MiniLangParser.ArgsContext):
+        pass
+
+    # Exit a parse tree produced by MiniLangParser#args.
+    def exitArgs(self, ctx:MiniLangParser.ArgsContext):
+        pass
+
+
+    # Enter a parse tree produced by MiniLangParser#returnStmt.
+    def enterReturnStmt(self, ctx:MiniLangParser.ReturnStmtContext):
+        pass
+
+    # Exit a parse tree produced by MiniLangParser#returnStmt.
+    def exitReturnStmt(self, ctx:MiniLangParser.ReturnStmtContext):
+        pass
+
+
     # Enter a parse tree produced by MiniLangParser#StringExpr.
     def enterStringExpr(self, ctx:MiniLangParser.StringExprContext):
         pass
 
     # Exit a parse tree produced by MiniLangParser#StringExpr.
     def exitStringExpr(self, ctx:MiniLangParser.StringExprContext):
+        pass
+
+
+    # Enter a parse tree produced by MiniLangParser#FunctionCallExpr.
+    def enterFunctionCallExpr(self, ctx:MiniLangParser.FunctionCallExprContext):
+        pass
+
+    # Exit a parse tree produced by MiniLangParser#FunctionCallExpr.
+    def exitFunctionCallExpr(self, ctx:MiniLangParser.FunctionCallExprContext):
         pass
 
 
@@ -104,6 +239,15 @@ class MiniLangListener(ParseTreeListener):
 
     # Exit a parse tree produced by MiniLangParser#LogicExpr.
     def exitLogicExpr(self, ctx:MiniLangParser.LogicExprContext):
+        pass
+
+
+    # Enter a parse tree produced by MiniLangParser#CompareExpr.
+    def enterCompareExpr(self, ctx:MiniLangParser.CompareExprContext):
+        pass
+
+    # Exit a parse tree produced by MiniLangParser#CompareExpr.
+    def exitCompareExpr(self, ctx:MiniLangParser.CompareExprContext):
         pass
 
 
