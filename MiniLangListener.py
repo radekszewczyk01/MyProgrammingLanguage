@@ -134,6 +134,51 @@ class MiniLangListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by MiniLangParser#structDecl.
+    def enterStructDecl(self, ctx:MiniLangParser.StructDeclContext):
+        pass
+
+    # Exit a parse tree produced by MiniLangParser#structDecl.
+    def exitStructDecl(self, ctx:MiniLangParser.StructDeclContext):
+        pass
+
+
+    # Enter a parse tree produced by MiniLangParser#memberDecl.
+    def enterMemberDecl(self, ctx:MiniLangParser.MemberDeclContext):
+        pass
+
+    # Exit a parse tree produced by MiniLangParser#memberDecl.
+    def exitMemberDecl(self, ctx:MiniLangParser.MemberDeclContext):
+        pass
+
+
+    # Enter a parse tree produced by MiniLangParser#classDecl.
+    def enterClassDecl(self, ctx:MiniLangParser.ClassDeclContext):
+        pass
+
+    # Exit a parse tree produced by MiniLangParser#classDecl.
+    def exitClassDecl(self, ctx:MiniLangParser.ClassDeclContext):
+        pass
+
+
+    # Enter a parse tree produced by MiniLangParser#MethodDeclaration.
+    def enterMethodDeclaration(self, ctx:MiniLangParser.MethodDeclarationContext):
+        pass
+
+    # Exit a parse tree produced by MiniLangParser#MethodDeclaration.
+    def exitMethodDeclaration(self, ctx:MiniLangParser.MethodDeclarationContext):
+        pass
+
+
+    # Enter a parse tree produced by MiniLangParser#ConstructorDeclaration.
+    def enterConstructorDeclaration(self, ctx:MiniLangParser.ConstructorDeclarationContext):
+        pass
+
+    # Exit a parse tree produced by MiniLangParser#ConstructorDeclaration.
+    def exitConstructorDeclaration(self, ctx:MiniLangParser.ConstructorDeclarationContext):
+        pass
+
+
     # Enter a parse tree produced by MiniLangParser#functionDecl.
     def enterFunctionDecl(self, ctx:MiniLangParser.FunctionDeclContext):
         pass
@@ -170,6 +215,15 @@ class MiniLangListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by MiniLangParser#memberAccess.
+    def enterMemberAccess(self, ctx:MiniLangParser.MemberAccessContext):
+        pass
+
+    # Exit a parse tree produced by MiniLangParser#memberAccess.
+    def exitMemberAccess(self, ctx:MiniLangParser.MemberAccessContext):
+        pass
+
+
     # Enter a parse tree produced by MiniLangParser#args.
     def enterArgs(self, ctx:MiniLangParser.ArgsContext):
         pass
@@ -197,30 +251,12 @@ class MiniLangListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by MiniLangParser#FunctionCallExpr.
-    def enterFunctionCallExpr(self, ctx:MiniLangParser.FunctionCallExprContext):
-        pass
-
-    # Exit a parse tree produced by MiniLangParser#FunctionCallExpr.
-    def exitFunctionCallExpr(self, ctx:MiniLangParser.FunctionCallExprContext):
-        pass
-
-
     # Enter a parse tree produced by MiniLangParser#FloatExpr.
     def enterFloatExpr(self, ctx:MiniLangParser.FloatExprContext):
         pass
 
     # Exit a parse tree produced by MiniLangParser#FloatExpr.
     def exitFloatExpr(self, ctx:MiniLangParser.FloatExprContext):
-        pass
-
-
-    # Enter a parse tree produced by MiniLangParser#MulDivExpr.
-    def enterMulDivExpr(self, ctx:MiniLangParser.MulDivExprContext):
-        pass
-
-    # Exit a parse tree produced by MiniLangParser#MulDivExpr.
-    def exitMulDivExpr(self, ctx:MiniLangParser.MulDivExprContext):
         pass
 
 
@@ -242,6 +278,33 @@ class MiniLangListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by MiniLangParser#NegExpr.
+    def enterNegExpr(self, ctx:MiniLangParser.NegExprContext):
+        pass
+
+    # Exit a parse tree produced by MiniLangParser#NegExpr.
+    def exitNegExpr(self, ctx:MiniLangParser.NegExprContext):
+        pass
+
+
+    # Enter a parse tree produced by MiniLangParser#FunctionCallExpr.
+    def enterFunctionCallExpr(self, ctx:MiniLangParser.FunctionCallExprContext):
+        pass
+
+    # Exit a parse tree produced by MiniLangParser#FunctionCallExpr.
+    def exitFunctionCallExpr(self, ctx:MiniLangParser.FunctionCallExprContext):
+        pass
+
+
+    # Enter a parse tree produced by MiniLangParser#MulDivExpr.
+    def enterMulDivExpr(self, ctx:MiniLangParser.MulDivExprContext):
+        pass
+
+    # Exit a parse tree produced by MiniLangParser#MulDivExpr.
+    def exitMulDivExpr(self, ctx:MiniLangParser.MulDivExprContext):
+        pass
+
+
     # Enter a parse tree produced by MiniLangParser#CompareExpr.
     def enterCompareExpr(self, ctx:MiniLangParser.CompareExprContext):
         pass
@@ -251,12 +314,12 @@ class MiniLangListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by MiniLangParser#NegExpr.
-    def enterNegExpr(self, ctx:MiniLangParser.NegExprContext):
+    # Enter a parse tree produced by MiniLangParser#NewExpr.
+    def enterNewExpr(self, ctx:MiniLangParser.NewExprContext):
         pass
 
-    # Exit a parse tree produced by MiniLangParser#NegExpr.
-    def exitNegExpr(self, ctx:MiniLangParser.NegExprContext):
+    # Exit a parse tree produced by MiniLangParser#NewExpr.
+    def exitNewExpr(self, ctx:MiniLangParser.NewExprContext):
         pass
 
 
@@ -278,12 +341,30 @@ class MiniLangListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by MiniLangParser#MemberAccessExpr.
+    def enterMemberAccessExpr(self, ctx:MiniLangParser.MemberAccessExprContext):
+        pass
+
+    # Exit a parse tree produced by MiniLangParser#MemberAccessExpr.
+    def exitMemberAccessExpr(self, ctx:MiniLangParser.MemberAccessExprContext):
+        pass
+
+
     # Enter a parse tree produced by MiniLangParser#AddSubExpr.
     def enterAddSubExpr(self, ctx:MiniLangParser.AddSubExprContext):
         pass
 
     # Exit a parse tree produced by MiniLangParser#AddSubExpr.
     def exitAddSubExpr(self, ctx:MiniLangParser.AddSubExprContext):
+        pass
+
+
+    # Enter a parse tree produced by MiniLangParser#MethodCallExpr.
+    def enterMethodCallExpr(self, ctx:MiniLangParser.MethodCallExprContext):
+        pass
+
+    # Exit a parse tree produced by MiniLangParser#MethodCallExpr.
+    def exitMethodCallExpr(self, ctx:MiniLangParser.MethodCallExprContext):
         pass
 
 

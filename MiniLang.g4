@@ -1,6 +1,6 @@
 grammar MiniLang;
 
-program : (functionDecl | statement)+ ;
+program : (functionDecl | structDecl | classDecl | statement)+ ;
 
 statement
     : decl
@@ -21,11 +21,11 @@ decl
     ;
 
 assign
-    : ID ('[' expr ']' ('[' expr ']')?)? '=' expr ';'
+    : (ID | memberAccess) ('[' expr ']' ('[' expr ']')?)? '=' expr ';'
     ;
 
 readStmt
-    : 'read' ID ';'
+    : 'read' (ID | memberAccess) ';'
     ;
 
 printStmt: 'print' expr ';';
@@ -63,6 +63,25 @@ block
     : '{' statement* '}'
     ;
 
+structDecl
+    : 'struct' ID '{' (memberDecl ';')+ '}' ';'
+    ;
+
+memberDecl
+    : type ID
+    ;
+
+classDecl
+    : 'class' ID ('extends' ID)? '{'
+      (memberDecl ';' | methodDecl)*
+      '}' ';'
+    ;
+
+methodDecl
+    : type ID '(' params? ')' block  # MethodDeclaration
+    | 'constructor' '(' params? ')' block  # ConstructorDeclaration
+    ;
+
 functionDecl
     : type ID '(' params? ')' block
     ;
@@ -76,7 +95,11 @@ param
     ;
 
 functionCall
-    : ID '(' args? ')'
+    : (ID | memberAccess) '(' args? ')'
+    ;
+
+memberAccess
+    : ID '.' ID ('.' ID)*
     ;
 
 args
@@ -93,19 +116,24 @@ expr
     | expr op=('&&' | '||' | '^^') expr    # LogicExpr
     | expr op=('==' | '!=' | '<' | '>' | '<=' | '>=') expr # CompareExpr
     | '!' expr                             # NegExpr
+    | memberAccess '(' args? ')'           # MethodCallExpr
     | ID '(' args? ')'                     # FunctionCallExpr
+    | memberAccess                         # MemberAccessExpr
     | ID ('[' expr ']' ('[' expr ']')?)?   # IdExpr
     | FLOAT                                # FloatExpr
     | INT                                  # IntExpr
     | STRING                               # StringExpr
+    | 'new' ID '(' args? ')'               # NewExpr
     | '(' expr ')'                         # ParensExpr
     ;
+
 type
     : 'int'
     | 'float32'
     | 'float64'
     | 'string'
     | 'void'
+    | ID
     ;
 
 ID     : [a-zA-Z_][a-zA-Z_0-9]* ;

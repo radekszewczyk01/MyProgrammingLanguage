@@ -79,6 +79,31 @@ class MiniLangVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by MiniLangParser#structDecl.
+    def visitStructDecl(self, ctx:MiniLangParser.StructDeclContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MiniLangParser#memberDecl.
+    def visitMemberDecl(self, ctx:MiniLangParser.MemberDeclContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MiniLangParser#classDecl.
+    def visitClassDecl(self, ctx:MiniLangParser.ClassDeclContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MiniLangParser#MethodDeclaration.
+    def visitMethodDeclaration(self, ctx:MiniLangParser.MethodDeclarationContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MiniLangParser#ConstructorDeclaration.
+    def visitConstructorDeclaration(self, ctx:MiniLangParser.ConstructorDeclarationContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by MiniLangParser#functionDecl.
     def visitFunctionDecl(self, ctx:MiniLangParser.FunctionDeclContext):
         return self.visitChildren(ctx)
@@ -99,6 +124,11 @@ class MiniLangVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by MiniLangParser#memberAccess.
+    def visitMemberAccess(self, ctx:MiniLangParser.MemberAccessContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by MiniLangParser#args.
     def visitArgs(self, ctx:MiniLangParser.ArgsContext):
         return self.visitChildren(ctx)
@@ -114,18 +144,8 @@ class MiniLangVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by MiniLangParser#FunctionCallExpr.
-    def visitFunctionCallExpr(self, ctx:MiniLangParser.FunctionCallExprContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by MiniLangParser#FloatExpr.
     def visitFloatExpr(self, ctx:MiniLangParser.FloatExprContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by MiniLangParser#MulDivExpr.
-    def visitMulDivExpr(self, ctx:MiniLangParser.MulDivExprContext):
         return self.visitChildren(ctx)
 
 
@@ -139,13 +159,28 @@ class MiniLangVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by MiniLangParser#NegExpr.
+    def visitNegExpr(self, ctx:MiniLangParser.NegExprContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MiniLangParser#FunctionCallExpr.
+    def visitFunctionCallExpr(self, ctx:MiniLangParser.FunctionCallExprContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MiniLangParser#MulDivExpr.
+    def visitMulDivExpr(self, ctx:MiniLangParser.MulDivExprContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by MiniLangParser#CompareExpr.
     def visitCompareExpr(self, ctx:MiniLangParser.CompareExprContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by MiniLangParser#NegExpr.
-    def visitNegExpr(self, ctx:MiniLangParser.NegExprContext):
+    # Visit a parse tree produced by MiniLangParser#NewExpr.
+    def visitNewExpr(self, ctx:MiniLangParser.NewExprContext):
         return self.visitChildren(ctx)
 
 
@@ -159,8 +194,18 @@ class MiniLangVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by MiniLangParser#MemberAccessExpr.
+    def visitMemberAccessExpr(self, ctx:MiniLangParser.MemberAccessExprContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by MiniLangParser#AddSubExpr.
     def visitAddSubExpr(self, ctx:MiniLangParser.AddSubExprContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MiniLangParser#MethodCallExpr.
+    def visitMethodCallExpr(self, ctx:MiniLangParser.MethodCallExprContext):
         return self.visitChildren(ctx)
 
 
